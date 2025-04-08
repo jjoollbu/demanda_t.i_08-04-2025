@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Serviço - Praxis</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Solicitar Serviço Praxis</h1>
+        <form id="serviceForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Área:</label>
+                <select id="area" name="area" required onchange="updateServices()">
+                    <option value="">Selecione uma área</option>
+                    <option value="Arquitetura">Arquitetura</option>
+                    <option value="T.I">T.I</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Serviço Específico:</label>
+                <select id="service" name="service" required>
+                    <option value="">Primeiro selecione uma área</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensagem Adicional:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <button type="submit">Enviar via WhatsApp</button>
+        </form>
+    </div>
+    <script src="./form.js"></script>
+</body>
+</html>

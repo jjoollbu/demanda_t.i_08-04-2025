@@ -1,0 +1,118 @@
+:root {
+    --dark-1: #141414;
+    --dark-2: #232323;
+    --dark-3: #2e2e2e;
+    --yellow-1: #ffcf00;
+    --yellow-2: #ffd000;
+    --yellow-3: #ffda34;
+    --white: #ffffff;
+    
+    --background: var(--dark-1);
+    --form-background: var(--dark-2);
+    --primary-text: var(--white);
+    --secondary-text: var(--yellow-1);
+    --border-color: var(--dark-3);
+    --button-main: var(--yellow-1);
+    --button-hover: var(--yellow-2);
+    --button-active: var(--yellow-3);
+    --shadow-color: rgba(0,0,0,0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--primary-text);
+}
+
+.form-container {
+    background: var(--form-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--yellow-1);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--yellow-1);
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark-3);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--yellow-2);
+    box-shadow: 0 0 0 2px var(--yellow-3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: var(--button-main);
+    color: var(--dark-1);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+button:active {
+    background: var(--button-active);
+    transform: translateY(0);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
